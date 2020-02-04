@@ -21,9 +21,9 @@ const Comp2 = () => (
 const Name = ({ user }) => {
   const { count, w } = user;
 
-  // if (count !== 2) {
-  //   return null;
-  // }
+  if (count !== 2) {
+    return null;
+  }
 
   return <div>{w <= 411 ? <Comp1 /> : <Comp2 />}</div>;
 };

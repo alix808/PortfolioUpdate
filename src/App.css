@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Elevon_Trial_TwoG';
+  src: url('./fonts/Trial_elevon/TrialStaticFonts/Elevon_Trial_TwoG.ttf')
+    format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background: rgba(30, 30, 30, 1);
+}

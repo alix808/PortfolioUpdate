@@ -11,8 +11,8 @@ const HomePage = ({ user }) => {
 
   return (
     <div>
-      {count === 0 && <TextOne array={w <= 411 ? array1Mobile : array1} />}
-      {count === 1 && <TextTwo array={w <= 411 ? array2Mobile : array2} />}
+      {count === 0 && <TextOne array={w <= 414 ? array1Mobile : array1} />}
+      {count === 1 && <TextTwo array={w <= 414 ? array2Mobile : array2} />}
       <Name />
     </div>
   );

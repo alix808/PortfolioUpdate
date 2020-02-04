@@ -25,7 +25,7 @@ const Name = ({ user }) => {
     return null;
   }
 
-  return <div>{w <= 411 ? <Comp1 /> : <Comp2 />}</div>;
+  return <div>{w <= 414 ? <Comp1 /> : <Comp2 />}</div>;
 };
 
 const mapStateToProps = state => ({

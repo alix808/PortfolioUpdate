@@ -26,7 +26,7 @@ const Mask = ({ user }) => {
 
   let name = {};
 
-  if (w <= 411) {
+  if (w <= 414) {
     name = object2;
   } else {
     name = object1;

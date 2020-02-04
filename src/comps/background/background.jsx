@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { useSpring, useTransform, useAnimation, motion } from 'framer-motion';
-import { Flex, Container, Container2 } from './background.styles';
+import { Flex, Container } from './background.styles';
 import Mask from '../mask/mask';
 /* Redux */
 import { connect } from 'react-redux';
@@ -17,10 +17,17 @@ const Background = ({ user }) => {
 
   const controls = useAnimation();
 
-  controls.start({
-    height: backgroundAnimation ? '280px' : '0px',
-    transition: { duration: 2 }
-  });
+  async function sequence1() {
+    await controls.start({
+      height: '280px',
+      transition: { duration: 2 }
+    });
+    console.log('sequence1 complete');
+  }
+
+  if (backgroundAnimation) {
+    sequence1();
+  }
 
   return (
     <Flex>

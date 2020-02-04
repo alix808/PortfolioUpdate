@@ -38,7 +38,26 @@ const variants2 = {
     pathLength: 1
   },
   two: {
-    y: 0,
+    y: -45,
+    opacity: 1,
+    pathLength: 1
+  },
+  three: {
+    opacity: 1,
+    pathLength: 1
+  },
+
+  four: { pathLength: 1, opacity: 0, rotate: 360 }
+};
+
+const variants2Mobile = {
+  one: {
+    y: -1000,
+    opacity: 1,
+    pathLength: 1
+  },
+  two: {
+    y: -27,
     opacity: 1,
     pathLength: 1
   },
@@ -75,7 +94,7 @@ export const array2 = [
       'M40,49.8 L40,14.6 C40,10.4666667 38.5666667,7 35.7,4.2 C32.8333333,1.4 29.4,0 25.4,0 L25.4,0 L0.8,0 L0.8,22 L17.6,22 L17.6,49.8 L40,49.8 Z',
     width: 40,
     height: 50,
-    style: { transform: 'translate(-156px, -45px)' },
+    style: { transform: 'translate(-156px, 0px)' },
     variants: variants2
   }
 ];
@@ -105,7 +124,7 @@ export const array2Mobile = [
       'M23.8,29.88 L23.8,8.76 C23.8,6.28 22.94,4.2 21.22,2.52 C19.5,0.84 17.44,0 15.04,0 L15.04,0 L0.28,0 L0.28,13.2 L10.36,13.2 L10.36,29.88 L23.8,29.88 Z',
     width: 24,
     height: 30,
-    style: { transform: 'translate(-94px, -27px)' },
-    variants: variants2
+    style: { transform: 'translate(-94px, 0px)' },
+    variants: variants2Mobile
   }
 ];

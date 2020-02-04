@@ -5,7 +5,6 @@ import Name from '../../comps/name/name';
 import { connect } from 'react-redux';
 import { array1, array1Mobile } from './data1.js';
 import { array2, array2Mobile } from './data2.js';
-import { array3, array3Mobile } from './data3.js';
 
 const HomePage = ({ user }) => {
   const { count, w } = user;

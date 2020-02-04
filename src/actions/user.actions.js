@@ -1,4 +1,10 @@
-import { SET_MENU, SET_DIMENSIONS, INCREMENT, BACKGROUND } from './types';
+import {
+  SET_MENU,
+  SET_DIMENSIONS,
+  INCREMENT,
+  BACKGROUND,
+  BACKGROUND_COMPLETE
+} from './types';
 
 // Change menu's state
 export const setMenu = () => {
@@ -26,5 +32,12 @@ export const increment = () => {
 export const background = () => {
   return {
     type: BACKGROUND
+  };
+};
+
+// Set background animation
+export const backgroundCompFunc = () => {
+  return {
+    type: BACKGROUND_COMPLETE
   };
 };

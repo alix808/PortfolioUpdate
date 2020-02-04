@@ -4,9 +4,10 @@ import { Flex, Container } from './background.styles';
 import Mask from '../mask/mask';
 /* Redux */
 import { connect } from 'react-redux';
+import { backgroundCompFunc } from '../../actions/user.actions';
 
-const Background = ({ user }) => {
-  const { backgroundAnimation } = user;
+const Background = ({ user, backgroundCompFunc }) => {
+  const { backgroundAnimation, menu } = user;
   const x = useSpring(100, { damping: 0, mass: 500 });
   const xInput = [-100, 0, 100];
   const background = useTransform(x, xInput, [
@@ -22,11 +23,23 @@ const Background = ({ user }) => {
       height: '280px',
       transition: { duration: 2 }
     });
+    backgroundCompFunc();
+  }
+
+  async function sequence2() {
+    await controls.start({
+      height: '0px',
+      transition: { duration: 2 }
+    });
     console.log('sequence1 complete');
   }
 
   if (backgroundAnimation) {
     sequence1();
+  }
+
+  if (menu) {
+    sequence2();
   }
 
   return (
@@ -47,4 +60,4 @@ const mapStateToProps = state => ({
   user: state.user
 });
 
-export default connect(mapStateToProps, null)(Background);
+export default connect(mapStateToProps, { backgroundCompFunc })(Background);

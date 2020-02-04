@@ -2,7 +2,8 @@ import {
   SET_MENU,
   SET_DIMENSIONS,
   INCREMENT,
-  BACKGROUND
+  BACKGROUND,
+  BACKGROUND_COMPLETE
 } from '../actions/types';
 
 const initialState = {
@@ -10,7 +11,8 @@ const initialState = {
   w: window.innerWidth,
   h: window.innerHeight,
   count: 0,
-  backgroundAnimation: false
+  backgroundAnimation: false,
+  backgroundComplete: false
 };
 
 export default (state = initialState, action) => {
@@ -38,6 +40,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         backgroundAnimation: true
+      };
+
+    case BACKGROUND_COMPLETE:
+      return {
+        ...state,
+        backgroundComplete: true
       };
 
     default:

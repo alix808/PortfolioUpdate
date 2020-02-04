@@ -1,5 +1,6 @@
 import React from 'react';
 import HomePage from './pages/home/home-page';
+import Toggle from './comps/toggle/toggle';
 import { connect } from 'react-redux';
 import { setDimensions } from './actions/user.actions';
 import './App.css';
@@ -16,6 +17,7 @@ function App({ setDimensions }) {
 
   return (
     <div>
+      <Toggle />
       <HomePage />
     </div>
   );
